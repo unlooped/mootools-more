@@ -104,7 +104,7 @@ var Drag = new Class({
 		if (options.stopPropagation) event.stopPropagation();
 		this.mouse.start = event.page;
 
-		this.fireEvent('beforeStart', this.element);
+		this.fireEvent('beforeStart', [this.element, event]);
 
 		var limit = options.limit;
 		this.limit = {x: [], y: []};
